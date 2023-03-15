@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Tipse</title>
+</head>
+<body>
+
+      <section class="welcome paralax" id="welcome">
+        <div class="container">
+          <div class="welcome__wrap">
+            <div class="welcome__title">Welcome!</div>
+            <p>To leave a tip without cash or a review,
+              enter the employee code:</p>
+              <form action="" class="welcome__form">
+                <div class="welcome__form-inputs">
+                    <input maxlength="1" size="1" step="1" max="9" type="tel" placeholder="X">
+                    <input maxlength="1" size="1" step="1" max="9" type="tel" placeholder="X">
+                    <input maxlength="1" size="1" step="1" max="9" type="tel" placeholder="X">
+                  <div class="line"></div>
+                    <input maxlength="1" size="1" step="1" max="9" type="tel" placeholder="X">
+                    <input maxlength="1" size="1" step="1" max="9" type="tel" placeholder="X">
+                    <input maxlength="1" size="1" step="1" max="9" type="tel" placeholder="X">
+                </div>
+
+                <div class="welcome__form-eror">Recipient with this id was not found</div>
+                <button class="welcome__form-submit" disabled>Leave a tip</button>
+                <a href="#how-it-work" class="scroll desk">Learn more</a>
+                <a href="#how-work" class="scroll mob">Learn more</a>
+              </form>
+          </div>
+        </div>
+      </section>
+
+      <div class="mobile-menu">
+        <div class="container">
+          <div class="mobile-menu__wrap">
+          <div class="mobile-menu__top">
+            <div class="mobile-menu__top-head">
+              <a href="/" class="mobile-menu__logo">
+                <img src="img/logo.svg" alt="">
+              </a>
+              <button class="burger"><span></span></button>
+            </div>
+            <ul class="mobile-menu__list">
+              <li><a href="#how-work" class="mobile-menu__link scroll">როგორ ეს მუშაობს</a></li>
+              <li><a href="#welcome" class="mobile-menu__link scroll">Leave a tip</a></li>
+            </ul>
+          </div>
+
+          <div class="mobile-menu__bottom">
+            <div class="mobile-menu__actions">
+              <a href="#" class="mobile-menu__singin">შესვლა</a>
+              <a href="#" class="mobile-menu__register">რეგისტრაცია</a>
+            </div>
+            <div class="mobile-menu__lang">
+              <a href="rus.html" class="mobile-menu__lang-item">Rus</a>
+              <a href="index.html" class="mobile-menu__lang-item">Eng</a>
+              <a href="geo.html" class="mobile-menu__lang-item active">ქარ</a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-content">
+        <header class="header">
+          <div class="container">
+            <div class="header__wrap">
+              <div class="header__nav">
+                <a href="/" class="header__logo"><img src="img/logo.svg" alt=""></a>
+
+                <ul class="header__list">
+                  <li><a href="#how-it-work" class="scroll">როგორ ეს მუშაობს</a></li>
+                </ul>
+              </div>
+              <div class="header__actions">
+                <a href="#" class="header__register">რეგისტრაცია</a>
+                <a href="#" class="header__singin">შესვლა</a>
+                <div class="header__lang">
+                  <button class="header__lang-current">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99967 2.50065C5.85754 2.50065 2.49967 5.85852 2.49967 10.0007C2.49967 14.1428 5.85754 17.5007 9.99967 17.5007C14.1418 17.5007 17.4997 14.1428 17.4997 10.0007C17.4997 5.85852 14.1418 2.50065 9.99967 2.50065ZM0.833008 10.0007C0.833008 4.93804 4.93707 0.833984 9.99967 0.833984C15.0623 0.833984 19.1663 4.93804 19.1663 10.0007C19.1663 15.0632 15.0623 19.1673 9.99967 19.1673C4.93707 19.1673 0.833008 15.0632 0.833008 10.0007Z" fill="currentColor"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.833008 9.99935C0.833008 9.5391 1.20611 9.16602 1.66634 9.16602H18.333C18.7933 9.16602 19.1663 9.5391 19.1663 9.99935C19.1663 10.4596 18.7933 10.8327 18.333 10.8327H1.66634C1.20611 10.8327 0.833008 10.4596 0.833008 9.99935Z" fill="currentColor"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99967 0.833984C10.2338 0.833984 10.4571 0.932451 10.6149 1.1053C12.8356 3.53641 14.0976 6.69136 14.1662 9.98332C14.1664 9.9949 14.1664 10.0064 14.1662 10.018C14.0976 13.3099 12.8356 16.4649 10.6149 18.896C10.4571 19.0688 10.2338 19.1673 9.99967 19.1673C9.76559 19.1673 9.54226 19.0688 9.38442 18.896C7.16375 16.4649 5.90176 13.3099 5.83319 10.018C5.83295 10.0064 5.83295 9.9949 5.83319 9.98332C5.90176 6.69136 7.16375 3.53641 9.38442 1.1053C9.54226 0.932451 9.76559 0.833984 9.99967 0.833984ZM7.49986 10.0007C7.55698 12.563 8.43826 15.03 9.99967 17.0417C11.5611 15.03 12.4423 12.563 12.4995 10.0007C12.4423 7.43828 11.5611 4.97136 9.99967 2.95965C8.43826 4.97136 7.55698 7.43828 7.49986 10.0007Z" fill="currentColor"/>
+                    </svg>
+                    ქარ</button>
+                  <div class="header__lang-list">
+                    <a href="rus.html" class="header__lang-item">Rus</a>
+                    <a href="index.html" class="header__lang-item">Eng</a>
+                    <a href="geo.html" class="header__lang-item active">ქარ</a>
+                  </div>
+                </div>
+              </div>
+
+              <button class="burger"><span></span></button>
+            </div>
+          </div>
+        </header>
+
+
+        <section class="hero-section">
+          <div class="container">
+            <div class="hero-section__wrap">
+              <h1 class="geo">დაუტოვეთ ჩაი <br> <span class="" id="typed"></span> <br>
+                სწრაფი. მარტივი. <br>
+                უნაღდო.</h1>
+
+                <div class="hero-section__gallery">
+                  <div class="hero-section__item hero-section__item_5"><img src="img/1.png" alt=""></div>
+                  <div class="hero-section__item hero-section__item_4"><img src="img/2.png" alt=""></div>
+                  <div class="hero-section__item hero-section__item_7 active"><img src="img/3.png" alt=""></div>
+                  <div class="hero-section__item hero-section__item_6"><img src="img/4.png" alt=""></div>
+                  <div class="hero-section__item hero-section__item_2"><img src="img/5.png" alt=""></div>
+                  <div class="hero-section__item hero-section__item_3"><img src="img/6.png" alt=""></div>
+                </div>
+            </div>
+          </div>
+        </section>
+
+
+
+          <section class="tips-info" id="how-it-work">
+            <div class="container">
+              <div class="tips-info__wrap">
+                <div class="tips-info__smartphone">
+                  <img src="img/card1.png" alt="" class="tips-info__smartphone-front tips-info__smartphone-front_1">
+                  <img src="img/card2-geo.png" alt="" class="tips-info__smartphone-front tips-info__smartphone-front_2">
+                  <img src="img/card3-geo.png" alt="" class="tips-info__smartphone-front tips-info__smartphone-front_3">
+                  <img src="img/card4-geo.png" alt="" class="tips-info__smartphone-front tips-info__smartphone-front_4">
+
+                  <div class="tips-info__smartphone-qr">
+                    <img src="img/card-qr1.png" alt="">
+                  </div>
+
+                  <div class="tips-info__smartphone-emodji">
+                    <img src="img/Emoji.png" alt="">
+                  </div>
+
+                  <div class="tips-info__smartphone-payments">
+                    <img src="img/payments.png" alt="">
+                  </div>
+
+                  <div class="tips-info__smartphone-waiter">
+                    <img src="img/waiter-photo.png" alt="">
+                  </div>
+                </div>
+
+                <div class="tips-info__texts">
+                  <div class="tips-info__text tips-info__text_2">
+                    <div class="tips-info__text-block">
+                      <div class="title">აღმოაჩინეთ ჩვენი ჩაის დატოვების მარტივი სისტემა</div>
+                      <p>აირჩიეთ ჩაის ოდენობა, შეაფასეთ სერვისი, დატოვეთ რევიუ გადახდის გვერდზე</p>
+                    </div>
+                  </div>
+
+                  <div class="tips-info__text tips-info__text_1">
+                    <div class="tips-info__text-block">
+                      <div class="title">აღმოაჩინეთ ჩვენი ჩაის დატოვების მარტივი სისტემა</div>
+                      <p>დაასაკნერეთ მიმტანის უნიკალური QR-კოდი ტელეფონის კამერით</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tips-info__texts">
+                  <div class="tips-info__text tips-info__text_4">
+                    <div class="tips-info__text-block">
+                      <div class="title">აღმოაჩინეთ ჩვენი ჩაის დატოვების მარტივი სისტემა</div>
+                      <p>მიმტანი მომენტალურად იღებს ჩაის საკუთარ ანგარიშზე</p>
+                    </div>
+                  </div>
+
+                  <div class="tips-info__text tips-info__text_3">
+                    <div class="tips-info__text-block">
+                      <div class="title">აღმოაჩინეთ ჩვენი ჩაის დატოვების მარტივი სისტემა</div>
+                      <p>ამოარჩიეთ გადახდის ვარიანტი: Apple Pay, Google Pay ან საბანკო ბარათი</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          <section class="tips-info-mobile" id="how-work">
+            <div class="container">
+              <div class="tips-info-mobile__wrap">
+                <div class="tips-info-mobile__item">
+                  <div class="tips-info-mobile__item-text">
+                    <div class="title">აღმოაჩინეთ ჩვენი ჩაის დატოვების მარტივი სისტემა</div>
+                      <div class="text">დაასაკნერეთ მიმტანის უნიკალური QR-კოდი ტელეფონის კამერით</div>
+                  </div>
+                  <div class="tips-info-mobile__item-smarthone1">
+                    <div class="phone">
+                      <img src="img/card1.png" alt="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tips-info-mobile__item">
+                  <div class="tips-info-mobile__item-text">
+                    <div class="title">აღმოაჩინეთ ჩვენი ჩაის დატოვების მარტივი სისტემა</div>
+                      <div class="text">აირჩიეთ ჩაის ოდენობა, შეაფასეთ სერვისი, დატოვეთ რევიუ გადახდის გვერდზე</div>
+                  </div>
+                  <div class="tips-info-mobile__item-smarthone2">
+                    <img src="img/Emoji.png" alt="" class="emodji">
+                    <div class="phone">
+                      <img src="img/card2-geo.png" alt="">
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="tips-info-mobile__item">
+                  <div class="tips-info-mobile__item-text">
+                    <div class="title">აღმოაჩინეთ ჩვენი ჩაის დატოვების მარტივი სისტემა</div>
+                      <div class="text">ამოარჩიეთ გადახდის ვარიანტი: Apple Pay, Google Pay ან საბანკო ბარათი</div>
+                  </div>
+                  <div class="tips-info-mobile__item-smarthone3">
+                    <img src="img/payments.png" alt="" class="payments">
+                    <div class="phone">
+                      <img src="img/card3-geo.png" alt="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tips-info-mobile__item">
+                  <div class="tips-info-mobile__item-text">
+                    <div class="title">აღმოაჩინეთ ჩვენი ჩაის დატოვების მარტივი სისტემა</div>
+                      <div class="text">მიმტანი მომენტალურად იღებს ჩაის საკუთარ ანგარიშზე</div>
+                  </div>
+                  <div class="tips-info-mobile__item-smarthone4">
+                    <div class="phone">
+                      <img src="img/card4-geo.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        <section class="benefits">
+          <div class="container">
+            <div class="benefits__wrap">
+              <div class="subtitle">ვინ გამოიყენებს</div>
+              <h2>გამოყენების დადებითი მხარეები</h2>
+
+              <div class="benefits__nav">
+                <div class="benefits__nav-wrap">
+                  <a href="#Guest" class="benefits__nav-item active"><img src="img/icon1.png" alt="">სტუმარი</a>
+                  <a href="#Business" class="benefits__nav-item"><img src="img/icon2.png" alt="">ბიზნესი</a>
+                  <a href="#Waiter" class="benefits__nav-item"><img src="img/icon3.png" alt="">მიმტანი</a>
+                </div>
+              </div>
+
+              <div class="benefits__tabs">
+                <div class="benefits__tabs-content active" id="Guest">
+                  <div class="benefits__slider swiper">
+                    <div class="swiper-wrapper">
+                      <div class="benefits__item benefits__item_large swiper-slide">
+                        <div class="benefits__item-title">შესაძლებლობა, აჩვენოთ მადლიერება მიმტანს, თუ <br> ქეში არ გაქვთ</div>
+                        <div class="benefits__item-image">
+                          <img src="img/guest1.png" alt="" width="344">
+                        </div>
+                      </div>
+                      <div class="benefits__item benefits__item_small swiper-slide">
+                        <div class="benefits__item-title">გვაქვს პოპულარული გადახდის მეთოდები</div>
+                        <div class="benefits__item-image">
+                          <div class="benefits__item-pays">
+                            <div class="benefits__item-pays-item"><img src="img/apple-pay.svg" alt=""></div>
+                            <div class="benefits__item-pays-item"><img src="img/google-pay.svg" alt=""></div>
+                            <div class="benefits__item-pays-item"><img src="img/bank-pay.svg" alt=""></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="benefits__item benefits__item_small swiper-slide">
+                        <div class="benefits__item-title">მოწყობილობაში ენის ავტომატური გადართვა</div>
+                        <div class="benefits__item-image benefits__item-image_language">
+                          <img src="img/language.png" alt="" height="184">
+                        </div>
+                      </div>
+                      <div class="benefits__item benefits__item_large swiper-slide">
+                        <div class="benefits__item-title">ორგანიზაციის შესახებ ძვირფასი რევიუს წერა</div>
+                        <div class="benefits__item-image">
+                          <img src="img/guest2.png" alt="" width="344">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="benefits__tabs-content" id="Business">
+                  <div class="benefits__slider swiper">
+                    <div class="swiper-wrapper">
+                      <div class="benefits__item benefits__item_large swiper-slide">
+                        <div class="benefits__item-title">გუნდის ეფექტურობის შესახებ ინფორმაციის მართვის მოხერხებული სისტემა</div>
+                        <div class="benefits__item-image benefits__item-image_buisnes2 benefits__item-image_buisnes21">
+                          <img src="img/buisnes1-geo.png" alt="" width="413">
+                        </div>
+                      </div>
+                      <div class="benefits__item benefits__item_small swiper-slide">
+                        <div class="benefits__item-title">ბიზნესებისთვის აბსოლუტურად უფასოა</div>
+                        <div class="benefits__item-image">
+                          <div class="benefits__item-image__percent">100%</div>
+                        </div>
+                      </div>
+                      <div class="benefits__item benefits__item_small swiper-slide">
+                        <div class="benefits__item-image benefits__item-image_qr">
+                          <img src="img/qr-code.png" alt="" width="160">
+                        </div>
+                        <div class="benefits__item-title" style="margin-bottom: 0;">QR-კოდების განთავსება შესაძლებელია სხვადასხვა ნივთზე, ორგანიზაციის სტილის მიხედვით</div>
+                      </div>
+                      <div class="benefits__item benefits__item_large swiper-slide">
+                        <div class="benefits__item-title">სტუმრები უფრო ხშირად ტოვებენ ჩაის. სერვისის ხარისხი იზრდება.</div>
+                        <div class="benefits__item-image benefits__item-image_buisnes2">
+                          <img src="img/buisnes2.png" alt="" width="413">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="benefits__tabs-content" id="Waiter">
+                  <div class="benefits__slider swiper">
+                    <div class="swiper-wrapper">
+                      <div class="benefits__item benefits__item_large swiper-slide">
+                        <div class="benefits__item-title">ჩაი მომენტალურად ირიცხება ანგარიშზე. მარტივი და უსფართხოა.</div>
+                        <div class="benefits__item-image benefits__item-image_buisnes benefits__item-image_waiter1">
+                          <img src="img/waiter1.png" alt="" width="317">
+                        </div>
+                      </div>
+                      <div class="benefits__item benefits__item_small swiper-slide">
+                        <div class="benefits__item-title">სტუმრები იოლად ტოვებენ ჩაის თანამშრომლების დახმარებისა და სალაროს გარეშე.</div>
+                        <div class="benefits__item-image benefits__item-image_waiter2">
+                          <img src="img/waiter2.png" alt="" width="270">
+                        </div>
+                      </div>
+                      <div class="benefits__item benefits__item_small swiper-slide">
+                        <div class="benefits__item-title">სტუმრები ვერ ხედავენ <br>
+                          მიმღების პირად <br>
+                          მონაცემებს.</div>
+                        <div class="benefits__item-image benefits__item-image_language benefits__item-image_waiter3" style="margin-top: -20px;">
+                          <img src="img/waiter3.png" alt="" width="280">
+                        </div>
+                      </div>
+                      <div class="benefits__item benefits__item_large swiper-slide">
+                        <div class="benefits__item-title">მოსახერხებელი პირადი კაბინეტი კომენტარებისა და ტრანზაქციების ისტორიით</div>
+                        <div class="benefits__item-image benefits__item-image_buisnes2 benefits__item-image_waiter4">
+                          <img src="img/waiter4-geo.png" alt="" width="400">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="info-slider">
+          <div class="container">
+            <div class="info-slider__wrap">
+              <div class="info-slider__swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="info-slider__item swiper-slide">
+                    <div class="text">მიიღეთ ბევრად <br>
+                      მეტი ჩაის ფული</div>
+                    <img src="img/slider1.jpg" alt="">
+                  </div>
+                  <div class="info-slider__item swiper-slide">
+                    <div class="text">მიიღეთ ბევრად <br>
+                      მეტი ჩაის ფული</div>
+                    <img src="img/slider2.jpg" alt="">
+                  </div>
+                  <div class="info-slider__item swiper-slide">
+                    <div class="text">მიიღეთ ბევრად <br>
+                      მეტი ჩაის ფული</div>
+                    <img src="img/slider3.jpg" alt="">
+                  </div>
+                  <div class="info-slider__item info-slider__item_big swiper-slide">
+                    <div class="text">მიიღეთ ბევრად <br>
+                      მეტი ჩაის ფული</div>
+                    <img src="img/slider4.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="manager-section">
+          <div class="container">
+            <div class="manager-section__wrap">
+              <div class="manager-section__computer">
+                <div class="manager-section__computer-mac1">
+                  <img src="img/mac1-geo.png" alt="">
+                </div>
+                <div class="manager-section__computer-mac2">
+                  <img src="img/mac2-geo.png" alt="">
+                </div>
+
+                <div class="manager-section__computer-manager">
+                  <img src="img/manager1.svg" alt="">
+                </div>
+                <div class="manager-section__computer-tips">
+                  <img src="img/tips.svg" alt="">
+                </div>
+                <div class="manager-section__computer-trans">
+                  <img src="img/transactions.svg" alt="">
+                </div>
+                <div class="manager-section__computer-raiting">
+                  <img src="img/raiting.svg" alt="">
+                </div>
+
+              </div>
+              <div class="manager-section__texts">
+                <div class="manager-section__text manager-section__text_2">
+                  <div class="subtitle">მენეჯერი</div>
+                  <div class="title">გამოხმაურებე <br> ბის შესწავლა</div>
+                  <p>გამოხმაურებების აბსოლუტურად ახალი, მაღალი ხარისხის წყარო მენიუს, სერვისისა და კლიენტების გამოცდილების შესახებ</p>
+                </div>
+
+                <div class="manager-section__text manager-section__text_1">
+                  <div class="subtitle">მენეჯერი</div>
+                  <div class="title">გუნდის
+                    მენეჯმენტი</div>
+                  <p>მარტივი აწყობა, თანამშრომლების
+                    გამარტივებული მენეჯმენტი</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="manager-section-mobile">
+          <div class="container">
+            <div class="manager-section-mobile__wrap">
+              <div class="manager-section-mobile__item">
+                <div class="manager-section-mobile__item-mac">
+                  <img src="img/mac1-geo.png" alt="" class="mac">
+                  <img src="img/manager1.svg" alt="" class="manager">
+                </div>
+                <div class="manager-section-mobile__item-text">
+                  <div class="subtitle">მენეჯერი</div>
+                  <h2 class="title">გუნდის <br>
+                    მენეჯმენტი</h2>
+                  <div class="text">მარტივი აწყობა, თანამშრომლების
+                    გამარტივებული მენეჯმენტი</div>
+                </div>
+              </div>
+
+              <div class="manager-section-mobile__item">
+                <div class="manager-section-mobile__item-mac">
+                  <img src="img/mac2-geo.png" alt="" class="mac">
+                  <img src="img/raiting.svg" alt="" class="raiting">
+                  <img src="img/transactions.svg" alt="" class="transactions">
+                  <img src="img/tips.svg" alt="" class="tips">
+                </div>
+                <div class="manager-section-mobile__item-text">
+                  <div class="subtitle">მენეჯერი</div>
+                  <h2 class="title">გამოხმაურებების <br> შესწავლა</h2>
+                  <div class="text">გამოხმაურებების აბსოლუტურად ახალი, მაღალი ხარისხის წყარო მენიუს, სერვისისა და კლიენტების გამოცდილების შესახებ</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dont-waste">
+          <div class="container">
+            <a href="#" class="dont-waste__wrap">
+              <h2>ნაკლები ფიქრი <br>
+                მეტი ჩაი</h2>
+              <div class="dont-waste__link">რეგისტრაცია
+                <svg class="arr" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 21H7V27H10V21ZM38 27C39.6569 27 41 25.6569 41 24C41 22.3431 39.6569 21 38 21V27ZM10 27H38V21H10V27Z" fill="currentColor"/>
+                  <path d="M24 10L38 24L24 38" stroke="currentColor" stroke-width="6" stroke-linecap="square" stroke-linejoin="round"/>
+                </svg>
+
+                <svg class="line" width="614" height="12" viewBox="0 0 614 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="6" y1="6" x2="608" y2="6" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-dasharray="1 24"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </section>
+
+
+        <section class="conditions">
+          <div class="container">
+            <div class="conditions__wrap">
+              <div class="conditions__text">
+                <div class="subtitle">პირობები</div>
+                <h2>უფასოა <br>
+                  ბიზნესებისთვის </h2>
+                <p>Companies can utilize our service without incurring any charges for connecting. In the majority of cases, recipients also benefit from our service for free, as the fee is covered by the tip sender.</p>
+                <p class="green">In the rare instances where the tip sender does not compensate for the fee, 7% fee is taken from the total amount of the tip.</p>
+              </div>
+              <div class="conditions__image">
+                <img src="img/conditions.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="qr-code">
+          <div class="container">
+            <div class="qr-code__wrap">
+              <div class="subtitle">QR-code</div>
+              <h2>Where to place <br>
+                the QR code?</h2>
+
+              <div class="qr-code__nav">
+                <div class="qr-code__nav-wrap">
+                  <a href="#Restaurant" class="qr-code__nav-item active"><img src="img/icon4.png" alt="">Restaurant</a>
+                  <a href="#Courier" class="qr-code__nav-item"><img src="img/icon5.png" alt="">Courier</a>
+                  <a href="#Taxi" class="qr-code__nav-item"><img src="img/icon6.png" alt="">Taxi</a>
+                  <a href="#Beauty-saloon" class="qr-code__nav-item"><img src="img/icon7.png" alt="">Beauty saloon</a>
+                </div>
+              </div>
+
+
+              <div class="qr-code__content-wrap">
+                <div class="qr-code__content active" id="Restaurant">
+                  <div class="qr-code__swiper swiper">
+                    <div class="swiper-wrapper">
+                      <div class="qr-code__swiper-item swiper-slide">
+                        <img src="img/rest1.jpg" alt="">
+                        <p>Put business cards in the counter</p>
+                      </div>
+                      <div class="qr-code__swiper-item swiper-slide">
+                        <img src="img/rest2.jpg" alt="">
+                        <p>QR-code stickers <br>
+                          on tables</p>
+                      </div>
+                      <div class="qr-code__swiper-item swiper-slide">
+                        <img src="img/rest3.jpg" alt="">
+                        <p>Show <br>
+                          on phone</p>
+                      </div>
+                      <div class="qr-code__swiper-item swiper-slide">
+                        <img src="img/rest4.jpg" alt="">
+                        <p>Print <br>
+                          on coffee cup</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="qr-code__content" id="Courier">
+                  <div class="qr-code__swiper swiper">
+                    <div class="swiper-wrapper">
+                      <div class="qr-code__swiper-item swiper-slide">
+                        <img src="img/rest1.jpg" alt="">
+                        <p>Put business cards in the counter</p>
+                      </div>
+                      <div class="qr-code__swiper-item swiper-slide">
+                        <img src="img/rest2.jpg" alt="">
+                        <p>QR-code stickers <br>
+                          on tables</p>
+                      </div>
+                      <div class="qr-code__swiper-item swiper-slide">
+                        <img src="img/rest3.jpg" alt="">
+                        <p>Show <br>
+                          on phone</p>
+                      </div>
+                      <div class="qr-code__swiper-item swiper-slide">
+                        <img src="img/rest4.jpg" alt="">
+                        <p>Print <br>
+                          on coffee cup</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="qr-code__content" id="Taxi">
+                  <div class="qr-code__swiper swiper">
+                    <div class="swiper-wrapper">
+                      <div class="qr-code__swiper-item swiper-slide">
+                        <img src="img/rest1.jpg" alt="">
+                        <p>Put business cards in the counter</p>
+                      </div>
+                      <div class="qr-code__swiper-item swiper-slide">
+                        <img src="img/rest2.jpg" alt="">
+                        <p>QR-code stickers <br>
+                          on tables</p>
+                      </div>
+                      <div class="qr-code__swiper-item swiper-slide">
+                        <img src="img/rest3.jpg" alt="">
+                        <p>Show <br>
+                          on phone</p>
+                      </div>
+                      <div class="qr-code__swiper-item swiper-slide">
+                        <img src="img/rest4.jpg" alt="">
+                        <p>Print <br>
+                          on coffee cup</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="qr-code__content" id="Beauty-saloon">
+                  <div class="qr-code__swiper swiper">
+                    <div class="swiper-wrapper">
+                      <div class="qr-code__swiper-item swiper-slide">
+                        <img src="img/rest1.jpg" alt="">
+                        <p>Put business cards in the counter</p>
+                      </div>
+                      <div class="qr-code__swiper-item swiper-slide">
+                        <img src="img/rest2.jpg" alt="">
+                        <p>QR-code stickers <br>
+                          on tables</p>
+                      </div>
+                      <div class="qr-code__swiper-item swiper-slide">
+                        <img src="img/rest3.jpg" alt="">
+                        <p>Show <br>
+                          on phone</p>
+                      </div>
+                      <div class="qr-code__swiper-item swiper-slide">
+                        <img src="img/rest4.jpg" alt="">
+                        <p>Print <br>
+                          on coffee cup</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+        <section class="average">
+          <div class="container">
+            <div class="average__wrap">
+              <div class="average__green">
+                <div class="title">Average <br>
+                  tip amount</div>
+                  <div class="cost">12 ₾</div>
+                  <p>12% of the check amount</p>
+              </div>
+              <div class="average__gray">
+                <div class="title">No employee <br>
+                  commission</div>
+                  <div class="cost">0%</div>
+                  <p>no employee commission</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section class="faq">
+          <div class="container">
+            <div class="faq__wrap">
+              <div class="subtitle">faq</div>
+              <h2>Answers to <br>
+                your questions</h2>
+
+              <div class="faq__list">
+                <div class="faq__items">
+                  <div class="faq__item open">
+                    <div class="faq__item-top">
+                      <div class="title">How to get a personal <br>
+                        QR code and link?</div>
+                      <button class="faq__item-button">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14 5.83301V22.1663" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.83398 14H22.1673" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="faq__item-text">Go to your Personal Account, select the "QR business card" item from the menu. The QR code and personal link are in the "QR code" tab. To copy the link or download the QR code, click on the button with the "Copy" icon or on the link "Download QR code". <br> <br></div>
+                  </div>
+                  <div class="faq__item">
+                    <div class="faq__item-top">
+                      <div class="title">What is the service <br>
+                        commission for waiters?</div>
+                      <button class="faq__item-button">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14 5.83301V22.1663" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.83398 14H22.1673" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="faq__item-text">Go to your Personal Account, select the "QR business card" item from the menu. The QR code and personal link are in the "QR code" tab. To copy the link or download the QR code, click on the button with the "Copy" icon or on the link "Download QR code". <br> <br></div>
+                  </div>
+                </div>
+                <div class="faq__items">
+                  <div class="faq__item">
+                    <div class="faq__item-top">
+                      <div class="title">What is the service <br>
+                        commission for waiters?</div>
+                      <button class="faq__item-button">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14 5.83301V22.1663" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.83398 14H22.1673" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="faq__item-text">Go to your Personal Account, select the "QR business card" item from the menu. The QR code and personal link are in the "QR code" tab. To copy the link or download the QR code, click on the button with the "Copy" icon or on the link "Download QR code". <br> <br></div>
+                  </div>
+                  <div class="faq__item">
+                    <div class="faq__item-top">
+                      <div class="title">How quickly is a tip credited <br>
+                        to a bank card?</div>
+                      <button class="faq__item-button">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14 5.83301V22.1663" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.83398 14H22.1673" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="faq__item-text">Go to your Personal Account, select the "QR business card" item from the menu. The QR code and personal link are in the "QR code" tab. To copy the link or download the QR code, click on the button with the "Copy" icon or on the link "Download QR code". <br> <br></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__wrap">
+            <div class="footer__left">
+              <a href="#" class="footer__logo"><img src="img/logo2.svg" alt=""></a>
+
+              <a href="#" class="starting">Start using!
+                <svg class="arr" width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.332 38H12.332V50H18.332V38ZM69.6654 50C72.9791 50 75.6654 47.3137 75.6654 44C75.6654 40.6863 72.9791 38 69.6654 38V50ZM18.332 50H69.6654V38H18.332V50Z" fill="currentColor"/>
+                  <path d="M44 18.333L69.6667 43.9997L44 69.6663" stroke="currentColor" stroke-width="12" stroke-linecap="square" stroke-linejoin="round"/>
+                </svg>
+
+                <svg class="line" width="614" height="12" viewBox="0 0 614 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="6" y1="6" x2="608" y2="6" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-dasharray="1 24"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="footer__right">
+              <div class="footer__right-title">About</div>
+
+              <ul class="footer__list">
+                <li><a href="Terms-of-Service-geo.html">Terms of Service</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="Privacy-Policy-geo.html">Privacy Policy</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Presentation</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">YouTube</a></li>
+                <li><a href="#">Sign in</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+  <div id="typed-strings" style="opacity: 0; pointer-events: none; position: absolute;">
+    <span>მიმტანს</span>
+    <span>დამლაგებელს</span>
+    <span>დალაქს</span>
+    <span>მძღოლს</span>
+    <span>კურიერს</span>
+    <span>მექანიკოსს</span>
+  </div>
+
+
+  <script src="js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
+  <script src="js/ScrollSmoother.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
