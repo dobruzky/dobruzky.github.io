@@ -21,38 +21,44 @@ window.addEventListener("load", () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
 
-  let inputs = document.querySelectorAll('.welcome__form-inputs input');
+  const inputs = Array.from(document.querySelectorAll('.welcome__form-inputs input'));
+  const submitButton = document.querySelector('.welcome__form-submit');
+  
+  // To set proper state on come back from payment page
+  if(inputs.every((input) => input.value)) {
+    submitButton.removeAttribute('disabled')
+  }
 
-    inputs.forEach((input, i) => {
-      input.addEventListener('keyup', function(e) {
-        input.value = input.value.replace (/\D/g, '');
-        let ml = input.getAttribute('maxlength');
-        if (ml && input.value.length >= ml && inputs[i+1]) {
-          inputs[i+1].focus();
-        }
-      });
+  inputs.forEach((input, i) => {
+    input.addEventListener('keyup', function(e) {
+      input.value = input.value.replace (/\D/g, '');
+      const ml = input.getAttribute('maxlength');
+      if (ml && input.value.length >= ml && inputs[i+1]) {
+        inputs[i+1].focus();
+      }
+
+      if(inputs.every((input) => input.value)) {
+        submitButton.removeAttribute('disabled')
+      } else {
+        submitButton.setAttribute('disabled', true);
+      }
     });
-    inputs.forEach((input, i) => {
-      input.addEventListener('keydown', function(e) {
-        input.value = input.value.replace (/\D/g, '');
-        let ml = input.getAttribute('maxlength');
-        if (e.keyCode === 8 && !input.value.length >= 1 && inputs[i-1]) {
-          input.val = '';
-          inputs[i-1].focus();
-        }
-      });
+  });
+
+  inputs.forEach((input, i) => {
+    input.addEventListener('keydown', function(e) {
+      input.value = input.value.replace (/\D/g, '');
+      if (e.keyCode === 8 && !input.value.length >= 1 && inputs[i-1]) {
+        input.val = '';
+        inputs[i-1].focus();
+      }
     });
+  });
 
-    // inputs.forEach(input => {
-    //     const min = +input.min;
-    //     const max = +input.max;
-
-    //     input.addEventListener('input', (e) => {
-    //         const value = +input.value;
-    //         if (value > max) { input.value = max }
-    //         else if (value < min) { input.value = min }
-    //     });
-    //   });
+  submitButton.addEventListener('click', () => {
+    const code = inputs.map((input) => input.value).join('');
+    window.location.href = `https://dev.tipse.ge/pay/${code}`;
+  })
 
   document.querySelectorAll('.burger').forEach(item => {
     item.addEventListener('click', () => {
@@ -60,16 +66,16 @@ window.addEventListener("load", () => {
     });
   });
 
-document.querySelector('.header__lang-current').addEventListener('click', () => {
-  document.querySelector('.header__lang').classList.toggle('open');
-});
+  document.querySelector('.header__lang-current').addEventListener('click', () => {
+    document.querySelector('.header__lang').classList.toggle('open');
+  });
 
-document.addEventListener( 'click', (e) => {
-  const withinBoundaries = e.composedPath().includes(document.querySelector('.header__lang'));
-  if ( ! withinBoundaries ) {
-    document.querySelector('.header__lang').classList.remove('open');
-  }
-});
+  document.addEventListener( 'click', (e) => {
+    const withinBoundaries = e.composedPath().includes(document.querySelector('.header__lang'));
+    if ( ! withinBoundaries ) {
+      document.querySelector('.header__lang').classList.remove('open');
+    }
+  });
 
   let typed = new Typed('#typed', { // Тут id того блока, в которм будет анимация
     stringsElement: '#typed-strings', // Тут id блока из которого берем строки для анимации
