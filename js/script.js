@@ -57,7 +57,7 @@ window.addEventListener("load", () => {
 
   submitButton.addEventListener('click', () => {
     const code = inputs.map((input) => input.value).join('');
-    window.location.href = `https://app.tipse.ge/pay/${code}`;
+    window.location.href = `https://app.tipse.ge/tip?code=${code}`;
   })
 
   document.querySelectorAll('.burger').forEach(item => {
