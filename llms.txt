@@ -1,0 +1,29 @@
+# Tipse
+
+> Tipse is a cashless tipping and guest feedback service in Georgia. Its public website is https://tipse.ge/ and its application is https://app.tipse.ge/.
+
+Guests can scan an employee's QR code or enter an employee code on the landing page to open the tipping flow. They can choose a tip amount, rate the service, and leave feedback. Businesses can manage their teams and review guest feedback in the application.
+
+The public landing page is available in English, Russian, and Georgian. Business onboarding starts with a Google Form; submitting it is a request to be contacted, not confirmation that an account has been activated. Existing users sign in through the application.
+
+For fees and payment conditions, refer to the Terms of Service and the information displayed in the payment interface. This overview does not replace the legal documents. Contact: info@tipse.ge.
+
+## Website
+
+- [English landing page](https://tipse.ge/): How Tipse works, benefits for guests, businesses and staff, and QR code placement examples.
+- [Russian landing page](https://tipse.ge/rus.html): Russian version of the public landing page.
+- [Georgian landing page](https://tipse.ge/geo.html): Georgian version of the public landing page.
+
+## Registration and application
+
+- [Business registration request](https://forms.gle/3ADWyS74WoTugsmN7): Provide venue and contact information so the Tipse team can follow up.
+- [Tipse application](https://app.tipse.ge/): Sign-in entry point for existing users.
+
+## Terms and privacy
+
+- [Terms of Service](https://tipse.ge/Terms-of-Service.html): Service scope, fees, rights and obligations.
+- [Terms linked from the Russian site](https://tipse.ge/Terms-of-Service-rus.html): The agreement body is currently in English.
+- [Terms linked from the Georgian site](https://tipse.ge/Terms-of-Service-geo.html): The agreement body is currently in English.
+- [Privacy Policy](https://tipse.ge/Privacy-Policy.html): Personal data processing policy.
+- [Privacy Policy linked from the Russian site](https://tipse.ge/Privacy-Policy-rus.html): Privacy policy linked by the Russian landing page.
+- [Privacy Policy linked from the Georgian site](https://tipse.ge/Privacy-Policy-geo.html): Privacy policy linked by the Georgian landing page.
