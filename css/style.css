@@ -2268,6 +2268,7 @@ h2 {
 }
 .info-slider__swiper {
   width: 100%;
+  aspect-ratio: 33 / 17;
   border-radius: 44px;
 }
 @media (max-width: 1050px) {
