@@ -21,45 +21,6 @@ window.addEventListener("load", () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
 
-  const inputs = Array.from(document.querySelectorAll('.welcome__form-inputs input'));
-  const submitButton = document.querySelector('.welcome__form-submit');
-  
-  // To set proper state on come back from payment page
-  if(inputs.every((input) => input.value)) {
-    submitButton.removeAttribute('disabled')
-  }
-
-  inputs.forEach((input, i) => {
-    input.addEventListener('keyup', function(e) {
-      input.value = input.value.replace (/\D/g, '');
-      const ml = input.getAttribute('maxlength');
-      if (ml && input.value.length >= ml && inputs[i+1]) {
-        inputs[i+1].focus();
-      }
-
-      if(inputs.every((input) => input.value)) {
-        submitButton.removeAttribute('disabled')
-      } else {
-        submitButton.setAttribute('disabled', true);
-      }
-    });
-  });
-
-  inputs.forEach((input, i) => {
-    input.addEventListener('keydown', function(e) {
-      input.value = input.value.replace (/\D/g, '');
-      if (e.keyCode === 8 && !input.value.length >= 1 && inputs[i-1]) {
-        input.val = '';
-        inputs[i-1].focus();
-      }
-    });
-  });
-
-  submitButton.addEventListener('click', () => {
-    const code = inputs.map((input) => input.value).join('');
-    window.location.href = `https://app.tipse.ge/tip?code=${code}`;
-  })
-
   document.querySelectorAll('.burger').forEach(item => {
     item.addEventListener('click', () => {
       document.querySelector('body').classList.toggle('mobile-menu-open');
@@ -99,21 +60,6 @@ window.addEventListener("load", () => {
 function isTouchDevice() {
   return !!('ontouchstart' in window);
 }
-
-let tlwelcome = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".page-content",
-    start: 'top-=16px top', // when the top of the trigger hits the top of the viewport
-
-    onEnter: () => {
-      document.querySelector('body').classList.add('info-page');
-      gsap.to(window, {duration: 0, scrollTo: 0});
-      tlwelcome.kill();
-      ScrollTrigger.refresh();
-    },
-  }
-});
-
 
 let tl = gsap.timeline({
   scrollTrigger: {

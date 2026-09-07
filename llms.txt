@@ -2,7 +2,7 @@
 
 > Tipse is a cashless tipping and guest feedback service in Georgia. Its public website is https://tipse.ge/ and its application is https://app.tipse.ge/.
 
-Guests can scan an employee's QR code or enter an employee code on the landing page to open the tipping flow. They can choose a tip amount, rate the service, and leave feedback. Businesses can manage their teams and review guest feedback in the application.
+Guests can scan an employee's QR code to open the tipping flow. They can choose a tip amount, rate the service, and leave feedback. Businesses can manage their teams and review guest feedback in the application.
 
 The public landing page is available in English, Russian, and Georgian. Business onboarding starts with a Google Form; submitting it is a request to be contacted, not confirmation that an account has been activated. Existing users sign in through the application.
 
