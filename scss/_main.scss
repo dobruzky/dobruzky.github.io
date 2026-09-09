@@ -924,6 +924,8 @@
   // .info-slider__swiper
   &__swiper {
     width: 100%;
+    // Reserve photo height before lazy images load so ScrollTrigger measures correctly.
+    aspect-ratio: 33 / 17;
     border-radius: 44px;
 
     @media (max-width: 1050px) {
@@ -1779,7 +1781,7 @@
       height: 10px;
       z-index: 10;
 
-      @media (max-width: 600px) {
+      @media (max-width: 900px) {
         display: none;
       }
     }
